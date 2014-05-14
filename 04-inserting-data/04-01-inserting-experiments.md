@@ -57,10 +57,30 @@ For solving the BED columns naming problem we created the "Column Types".
 #### Columns Types
 
 DeepBlue provides a set of columns types to be used when inserting an experiment or annotation.
+A column contains ```name```, ```type```, and ```ignore_if```:
 
-[list_column_types](http://deepblue.mpi-inf.mpg.de/api.html#api-list_column_types) 
+ * ```name``` is the unique identifier, that will be used in the BED file descriptor.
+ * ```type``` can be ```string```, ```snteger```, ```double```, ```category```, and ```range```.
+ * ```ìgnore_if``` can be used to ignore the column content if its content is lexically the same from the defined in the column type.   
 
+Three commands are available to create insert a column type:
+ * [create_column_type_simple](http://deepblue.mpi-inf.mpg.de/api.html#api-create_column_type_simple) - To create a column type with simple types: ```string```, ```ìnteger```, and ```double```.
+ ```python
+ server.create_column_type_simple("NAME", "The Name!", "-", "string", user_key) 
+ server.create_column_type_simple("VALUE", "The Value!", "0.0", "double", user_key)
+ server.create_column_type_simple("POSITION", "The Position!", "0", "integer", user_key)
+ ```
+ * [create_column_type_category](http://deepblue.mpi-inf.mpg.de/api.html#api-create_column_type_category) - To create a column type that accepts a predefined set of values.
+```python
+ server.create_column_type_simple("STRAND", "Strand!", ".", ["+","-"], user_key) 
+ ``
+ * [create_column_type_range](http://deepblue.mpi-inf.mpg.de/api.html#api-create_column_type_range) - To create a column type that accepts a value that is in the range. (The value range is inclusive.)
+ ```python
+ server.create_column_type_range("NORMALIZED_SCORE", "Normalized Score", -1.0, 1.0, user_key)
+ ```
 
+As DeepBlue already contains pre-defined column types, will hardly be necessary to insert new column types.
+Use the command [list_column_types](http://deepblue.mpi-inf.mpg.de/api.html#api-list_column_types) to list all inserted column types:
 ```python
 (s, columns) = server.list_column_types(user_key)
 for column in columns:
