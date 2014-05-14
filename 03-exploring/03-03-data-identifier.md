@@ -9,15 +9,15 @@ The following table contains the identifier prefixes and their data:
 
 | Identifier | Data Type       |
 |:----------:|-----------------|
-| a          | annotation      |
-| e          | experiment      |
-| g          | genome          |
-| em         | epigenetic mark |
-| bs         | bio source      |
-| s          | sample          |
-| p          | project         | 
-| t          | technique       |
-| q          | query           |
+| a          | Annotation      |
+| e          | Experiment      |
+| g          | Genome          |
+| em         | Epigenetic Mark |
+| bs         | Bio Source      |
+| s          | Sample          |
+| p          | Project         | 
+| t          | Technique       |
+| q          | Query           |
 
 The command [info](http://deepblue.mpi-inf.mpg.de/api.html#api-info) is used to inspect the identifier content:
 ```python
@@ -56,7 +56,7 @@ We can use [info](http://deepblue.mpi-inf.mpg.de/api.html#api-info) command for 
 
 ```python
 (s, related) = server.get_bio_source_related("blood", user_key)
-related_names = [x[1] for x in related] # get bio source names
+related_names = [x[1] for x in related] # get Bio Source names
 (s, samples) = server.list_samples(related_names, {}, user_key)
 samples_id = [x[0] for x in samples] # get samples id
 

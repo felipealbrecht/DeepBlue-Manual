@@ -1,8 +1,8 @@
 # Basics
 DeepBlue is a data server focus in three main points: 
  * Epigenomic Data - Experiments and Annotations
- * Controlled Vocabularies - Data type names: genomes, projects, epigenetic marks, bio sources, and techniques
- * Operations - operations in the database: insertion, search, filter, aggregate, and retrieve
+ * Controlled Vocabularies - Data type names: Genomes, Projects, Epigenetic Marks, Bio Sources, and Techniques
+ * Operations - operations in the database: Insertion, Search, Filter, Aggregate, and Retrieve
 
 The main benefit from DeepBlue is having all epigenomic data from the major projects in one place, where all the data is organized using controlled vocabularies and the data retrieval process is eased by a set of operations.
 
@@ -12,4 +12,4 @@ The controlled vocabulary is used to name the main DeepBlue data types: [genomes
 This manual cover the entire DeepBlue usage: [Creating an user](creating-user.md), [Searching for data](searching.md), Inserting new data, Selecting data, Operating the data, and Retrieving data. The coding examples are written in *Python 2.7* but they can be easily adapted to others programming language. Along with this manual, we provide a reference guide with all commands and parameters at [DeepBlue API Documentation](http://deepblue.mpi-inf.mpg.de/api.html).
 
 
-Epigenomic data based on regions, peak, and base pair resolution. 
+Epigenomic data based on regions, peak, and base pair resolution.

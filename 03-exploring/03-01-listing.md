@@ -10,5 +10,5 @@ For instance, without any filter, the [list_experiments](http://deepblue.mpi-inf
 The [list_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-list_annotations) requires the genome name as parameter because the same annotation can be available for different genomes.
 
 The list_similar commands list all elements from the controlled vocabulary that are similar with the given input. The list_similar is available for
- [experiments](http://deepblue.mpi-inf.mpg.de/api.html#api-list_similar_experiments), [genomes](http://deepblue.mpi-inf.mpg.de/api.html#api-list_similar_genomes), [epigenetic marks](http://deepblue.mpi-inf.mpg.de/api.html#api-list_similar_epigenetic_marks), [bio sources](http://deepblue.mpi-inf.mpg.de/api.html#api-list_similar_bio_sources), [projects](http://deepblue.mpi-inf.mpg.de/api.html#api-list_similar_projects), and 
+ [experiments](http://deepblue.mpi-inf.mpg.de/api.html#api-list_similar_experiments), [genomes](http://deepblue.mpi-inf.mpg.de/api.html#api-list_similar_genomes), [epigenetic marks](http://deepblue.mpi-inf.mpg.de/api.html#api-list_similar_epigenetic_marks), [Bio Sources](http://deepblue.mpi-inf.mpg.de/api.html#api-list_similar_bio_sources), [projects](http://deepblue.mpi-inf.mpg.de/api.html#api-list_similar_projects), and 
  [techniques](http://deepblue.mpi-inf.mpg.de/api.html#api-list_similar_techniques).
