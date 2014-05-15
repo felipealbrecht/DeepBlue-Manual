@@ -17,7 +17,5 @@ intersection — Calculates the intersection of the given queries
 
 get_regions — Gets the regions for the given query in the requested BED format
 
-
-
-
+DeepBlue provides 2 operations for selecting data: [select_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-select_annotations) for annotations and [select_experiments](http://deepblue.mpi-inf.mpg.de/api.html#api-select_regions) for experiments.
 
