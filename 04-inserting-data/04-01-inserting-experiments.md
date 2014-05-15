@@ -1,4 +1,4 @@
-## Inserting Experiments
+## Inserting Experiment
 
 The [add_experiment](http://deepblue.mpi-inf.mpg.de/api.html#api-add_experiment) uses all controlled vocabularies to fill the inserted experiment metadata. 
 The parameter ```name``` should contains the experiment name. The name is unique per user. It means that we can have duplicated experiment names, but from different users. 
@@ -52,12 +52,13 @@ For example, an user can insert an experiment where the ```Value``` is a Integer
 iwhile another user can insert another experiment where the ```Value``` is a double.
 Also, different experiments can have different names for a fields with the same semantic, for instance chromosome, that could be defined as ```chrom```, ```chr```, or ```chromosome```.
 
-For solving the BED columns naming problem we created the "Column Types".
+DeepBlue has the ```Column Types``` data type that is used to solve the BED columns naming problem.
 
 #### Columns Types
 
-DeepBlue provides a set of columns types to be used when inserting an experiment or annotation.
-A column contains ```name```, ```type```, and ```ignore_if```:
+DeepBlue provides ```Column Types``` data type for predefining columns names and theirs respective types. They should be used to insert an experiment or annotation. Using ```Column Types``` is simples, only needing to inform the ```Column Type``` name. For example, the format defined by ```"Chromosome:String,Start:Integer,End:Integer,Value:Double:0.0"```can be rewrite by ```CHROMOSOMO,START,END,VALUE```.
+
+A ```Column Types``` must be previously created before being used. Each ```Column Type``` contains the 3 information that were defined directly in the BED format field:
 
  * ```name``` is the unique identifier, that will be used in the BED file descriptor.
  * ```type``` can be ```string```, ```snteger```, ```double```, ```category```, and ```range```.
@@ -79,10 +80,37 @@ Three commands are available to create insert a column type:
  server.create_column_type_range("NORMALIZED_SCORE", "Normalized Score", -1.0, 1.0, user_key)
  ```
 
-As DeepBlue already contains pre-defined column types, will hardly be necessary to insert new column types.
+As standard, always use capital letters for the ```Column Type``` name. 
+
+As DeepBlue already contains pre-defined column types, hardly be necessary to insert new column types.
 Use the command [list_column_types](http://deepblue.mpi-inf.mpg.de/api.html#api-list_column_types) to list all inserted column types:
 ```python
 (s, columns) = server.list_column_types(user_key)
 for column in columns:
   print column
+```
+
+Rewriting the format 
+```
+no_chr_start_end,milliDel:Integer:0,milliIns:Integer:0,chromosome:String,start:Integer:0,end:Integer:0,strand:String,repName:String,repClass:String```
+using Column Types:
+
+```
+no_chr_start_end,MILLI_DEL,MILLI_INS,CHROMOSOME,START,END,STRAND,REP_NAME,REP_CLASS
+```
+
+The standard [BED format](http://genome.ucsc.edu/FAQ/FAQformat.html#format1) has the following format in DeepBlue:
+
+```
+'NAME,SCORE,STRAND,THICK_START,THICK_END,ITEM_RGB,BLOCK_COUNT,BLOCK_SIZES,BLOCK_STARTS'
+```
+
+It is possible to inspect the Experiment format using the [info](http://deepblue.mpi-inf.mpg.de/api.html#api-info) command.
+We [search](http://deepblue.mpi-inf.mpg.de/api.html#api-search) for all experiments that contains "methylation" and "blood" in their medatada, get their full information using the [info](http://deepblue.mpi-inf.mpg.de/api.html#api-info) command, and print the name and format:
+
+```python
+(s, experiments) = server.search("\"methylation\" \"blood\"", "experiments", user_key)
+for experiment in experiments:
+	(s, e_info) = server.info(experiment[0], user_key)
+	print e_info["name"] + " : '" + e_info["format"] + "'"
 ```
