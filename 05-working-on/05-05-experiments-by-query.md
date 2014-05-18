@@ -1,0 +1,18 @@
+## Experiments by Query
+
+At the [previus example](05-03-selecting-experiments-example.md), we did select all experiments that matched a set of parameters. DeepBlue provides the command [get_experiments_by_query](http://deepblue.mpi-inf.mpg.de/api.html#api-get_experiments_by_query) to know which experiments where selected by the [select_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-select_regions) command.
+
+```python
+(status, experiments) = server.get_experiments_by_query(query_id, user_key)
+for experiment in experiments[:5]:
+  (status, info) = server.info(experiment[0], user_key)
+  print info["name"], info["format"]
+ ```
+
+ ```python
+wgEncodeHaibMethylRrbsNb4UwSitesRep1 CHROMOSOME,START,END,NAME,SCORE,STRAND,THICK_START,THICK_END,ITEM_RGB,BLOCK_COUNT,BLOCK_SIZES
+wgEncodeHaibMethylRrbsJurkatUwSitesRep1 CHROMOSOME,START,END,NAME,SCORE,STRAND,THICK_START,THICK_END,ITEM_RGB,BLOCK_COUNT,BLOCK_SIZES
+wgEncodeHaibMethylRrbsK562HaibSitesRep2 CHROMOSOME,START,END,NAME,SCORE,STRAND,THICK_START,THICK_END,ITEM_RGB,BLOCK_COUNT,BLOCK_SIZES
+wgEncodeHaibMethylRrbsCmkUwSitesRep1 CHROMOSOME,START,END,NAME,SCORE,STRAND,THICK_START,THICK_END,ITEM_RGB,BLOCK_COUNT,BLOCK_SIZES
+wgEncodeHaibMethylRrbsNb4UwSitesRep2 CHROMOSOME,START,END,NAME,SCORE,STRAND,THICK_START,THICK_END,ITEM_RGB,BLOCK_COUNT,BLOCK_SIZES
+ ```
