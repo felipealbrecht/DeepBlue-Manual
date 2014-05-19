@@ -37,4 +37,8 @@
 	* [Filtering Regions](05-working-on/05-06-filtering-regions.md)
 	* [Intersecting Regions](05-working-on/05-07-intersecting-regions.md)
 	* [Merging Region Sets](05-working-on/05-08-merging-region-sets.md)
+	* [Tiling Regions](05-working-on/05-09-tiling-regions.md)
+	* [Get Regions](05-working-on/05-10-get-regions.md)
+	* [Aggregation](05-working-on/05-11-aggregation.md)
+ * [Sequences](06-sequences/options.md)
 * [Involving](10-involving/involving.md)
