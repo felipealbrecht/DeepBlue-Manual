@@ -17,7 +17,7 @@ It is possible to retrieve the aggregation result by the Aggregation Metafield:
 | @AGG.COUNT          | Regions count              |
 
 
-In the following example we are aggregating the retrieve data into tiling regions of the length 100000:
+In the following example we are aggregating the retrieve data into tiling regions of the length 100000, and in the end we remove the aggregated regions that does not contain any region.
 
 ```python
 (status, blood_related) = server.get_bio_source_related("blood", user_key)
@@ -33,5 +33,7 @@ blood_samples_ids = [x[0] for x in blood_samples]
 
 (status, aggr_id) = server.aggregate(data_id, regions_id, "SCORE", user_key)
 
-print server.get_regions(agg_id, "CHROMOSOME,START,END,@AGG.MIN,@AGG.MAX,@AGG.MEDIAN,@AGG.MEAN,@AGG.SD,@AGG.COUNT")
+(status, aggr_filter) = server.filter_regions(aggr_id, "@AGG.COUNT", ">", "0", "integer", user_key)
+
+(status, regions) =  server.get_regions(aggr_filter, "CHROMOSOME,START,END,@AGG.MIN,@AGG.MAX,@AGG.MEDIAN,@AGG.MEAN,@AGG.SD,@AGG.COUNT", user_key)
 ```
