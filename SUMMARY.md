@@ -36,6 +36,7 @@
 	* [Queries' Experiments](05-working-on/05-05-experiments-by-query.md)
 	* [Filtering Regions](05-working-on/05-06-filtering-regions.md)
 	* [Intersecting Regions](05-working-on/05-07-intersecting-regions.md)
+	* [Example: Workflow](05-working-on/05-07-example_workflow.md)
 	* [Merging Region Sets](05-working-on/05-08-merging-region-sets.md)
 	* [Tiling Regions](05-working-on/05-09-tiling-regions.md)
 	* [Get Regions](05-working-on/05-10-get-regions.md)
