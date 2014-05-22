@@ -1,8 +1,8 @@
 ## User key
-The *user key* is your DeepBlue identification. It is **secret** and **must not be shared**, even with co-workers. Contact us if you have any problem with your key, please, contact us.
+The *user key* is your DeepBlue identification. It is **secret** and **must not be shared**, even with co-workers. Contact us if you have any problem with your key.
 
 The [echo](http://deepblue.mpi-inf.mpg.de/api.html#api-echo) command can be used to verify the *user key*. 
-The following code is an example of how can you verify your *user key*. 
+The following code shows how can you verify your *user key*.
 Remember to change ```user_key = "userkey123"``` to your proper user key. 
 
 ```python

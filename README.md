@@ -5,13 +5,13 @@ This manual presents DeepBlue, their commands, examples, and advices.
 
 ## Reference Guide
 A list of all commands is available at [DeepBlue API Page](http://deepblue.mpi-inf.mpg.de/api.html). 
-This list is updated automatically when new commands are inserted or modified.
+This list is updated automatically when new commands are added or modified.
 
 
-## Important Remarks
+## Disclaimer
 
-DeepBlue is a work in progress. API and data can (and probably will) change.
+DeepBlue is work in progress. The API and data can (and probably will) change.
 
-DeepBlue only import public data available. 
+DeepBlue only imports public data available. 
 
-Uploading data to the DeepBlue will make this data accessible to all users.
+Uploading data to the DeepBlue will make your data accessible for others users.
