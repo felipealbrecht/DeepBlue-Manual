@@ -12,7 +12,7 @@ print server.info(_id, user_key)
 
 ### Patterns Metafield
 
-It is possible to get the number of times that a pattern happens with the Metafilds: ```@COUNT.NON-OVERLAP(PATTERN)``` and ```@COUNT.NON-OVERLAP(PATTERN)``
+It is possible to get the number of times that a pattern happens with the Metafields: ```@COUNT.NON-OVERLAP(PATTERN)``` and ```@COUNT.NON-OVERLAP(PATTERN)``
 
 
 ```python
