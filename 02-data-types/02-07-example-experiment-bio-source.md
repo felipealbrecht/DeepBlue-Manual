@@ -1,4 +1,4 @@
-### Example: Obtaining all experiments from from a Bio Source
+### Example: Obtaining all experiments from a Bio Source
  
 The following code is an example of how to select all samples from the tissue colon:
 
