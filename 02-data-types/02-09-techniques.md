@@ -1,6 +1,6 @@
 ## Techniques
 
-The techniques controlled vocabulary contains the techniques used to perform the experiments.
+The technique data type contains information on ... . #FM: it is not clear how a technique is defined
 Currently, DeepBlue has the following techniques:
  
 ```python
@@ -19,4 +19,4 @@ server.list_techniques(user_key)
 Similar techniques names can be found using [list_similar_techniques](http://deepblue.mpi-inf.mpg.de/api.html#api-list_similar_techniques)
 
 The command [add_technique](http://deepblue.mpi-inf.mpg.de/api.html#api-add_technique) is used to insert a technique.
-Not every user has permission to insert new projects.
+Note that not all users have permissions to add new techniques.
