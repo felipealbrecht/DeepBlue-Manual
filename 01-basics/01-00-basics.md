@@ -1,6 +1,6 @@
 # Basics
 DeepBlue Epigenomic Data Server has three fundamental parts:
- * Epigenomic Data - Experiments and Annotations #FM: how are these defined?
+ * Epigenomic Data - Experiments and Annotations <!---FM: how are these defined?-->
  * Controlled Vocabularies - Data type names: Genomes, Projects, Epigenetic Marks, Bio Sources, and Techniques
  * Operations - operations in the database: Insertion, Search, Filter, Aggregate, and Retrieve
 
