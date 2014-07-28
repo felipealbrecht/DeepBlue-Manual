@@ -1,7 +1,7 @@
 ## Techniques
 
 The technique data type contains information on ... . #FM: it is not clear how a technique is defined
-Currently, DeepBlue has the following techniques:
+Currently, DeepBlue currently contains the following techniques:
  
 ```python
 server.list_techniques(user_key)
