@@ -1,6 +1,6 @@
 ## Techniques
 
-The technique data type contains information on experimental techniques thereby refining the epigenetic mark annotation. #FM: it is not clear how a technique is defined
+The technique data type contains information on experimental techniques thereby refining the epigenetic mark annotation. [#FM: it is not clear how a technique is defined]
 Currently, DeepBlue currently contains the following techniques:
  
 ```python
