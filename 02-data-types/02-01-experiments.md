@@ -14,8 +14,8 @@ An **Experiments** have the following attributes:
   * user - identification of the user that inserted the experiment.
 
 It is possible to obtain all experiments that match one or more attributes using the command [list_experiments](http://deepblue.mpi-inf.mpg.de/api.html#api-list_experiments). 
-This command receives the genome assembly name, epigenetic mark name, sample id, technique, project, and the *user key* as parameters.
-All parameters, with exception *user key*, can be *None* (or the *null* value in your favorite programming language). 
+This command receives the genome assembly, epigenetic mark, sample id, technique, project, and the *user key* as parameters.
+All parameters, with exception *user key*, can be *None* (or the *null* value in your favorite programming language). Setting a parameter to *None* results in the most general setting for this parameter. #FM: is that correct? 
 
 For instance, it is possible to list all available experiments passing an empty string in all the parameters:
 
@@ -29,7 +29,7 @@ server = xmlrpclib.Server(url, encoding='UTF-8', allow_none=True)
 all_experiments = server.list_experiments(None, None, None, None, None, user_key)
 ```
 
-If we want to find all experiments from the human genome assembly *hg19*, the Epigenetic Mark *H3K27me3* from the *ENCODE* project:
+If we want to find all experiments from the human genome assembly *hg19*, the epigenetic mark *H3K27me3* from the *ENCODE* project:
 
 ```python
 import xmlrpclib
