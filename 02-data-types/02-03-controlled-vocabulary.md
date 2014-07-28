@@ -4,7 +4,7 @@ Controlled vocabularies are used for describing [experiments](02-01-experiments.
 
 The bio source terms [#FM: you have not explained bio source yet] are imported from the [ENCODE controlled vocabulary][1], [Cell type](http://www.ontobee.org/browser/index.php?o=CL), [Experimental Factor Ontology](http://www.ontobee.org/browser/index.php?o=EFO), and [Uber anatomy ontology](http://www.ontobee.org/browser/index.php?o=UBERON)
 
-*DeepBlue* annotated the following data types using controlled vocabularies: [genomes](02-04-genomes.md), *epigenetic mark*, *Bio Sources*, *techniques*, and *projects*.
+*DeepBlue* annotates the following data types using controlled vocabularies: [genomes](02-04-genomes.md), *epigenetic mark*, *Bio Sources*, *techniques*, and *projects*.
 
 
 [ENCODE controlled vocabulary][ftp://hgdownload.cse.ucsc.edu/apache/cgi-bin/encode/cv.ra] 
