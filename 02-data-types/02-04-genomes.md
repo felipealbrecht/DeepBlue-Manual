@@ -54,4 +54,4 @@ print server.upload_chromosome("hgX", "chr1", data, user_key)
 ```
 The [Exploring the Data](../03-exploring/03-00-exploring.md) section discusses how to access and use the chromosome sequences.
 
-A list of all possible commands on Genomes is available in the [DeepBlue - Genome Commands API](http://deepblue.mpi-inf.mpg.de/api.html#api-genomes)
+A list of all possible commands on Genomes is available in the [DeepBlue - Genome Commands API](http://deepblue.mpi-inf.mpg.de/api.html#api-genomes) description.
