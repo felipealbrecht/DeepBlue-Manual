@@ -1,7 +1,7 @@
 ## Genomes
 
 The controlled vocabulary for genomes contains the assemblies names, descriptions, and chromosome names and sizes.
-DeepBlue currently only contains the assembly *hg19*, but new genome assemblies can be easily inserted using the [add_genome](http://deepblue.mpi-inf.mpg.de/api.html#api-add_genome) command. The following code example shows how to insert a new genome assembly:
+DeepBlue currently only contains the assembly *hg19*, but new genome assemblies can be easily inserted using the [add_genome](http://deepblue.mpi-inf.mpg.de/api.html#api-add_genome) command. The following code example shows how to insert a new genome assembly [#FM: given chromosome sizes?]:
 
 ```python
 genome_data = """chr1 1000000
@@ -17,13 +17,13 @@ The command [chromosomes](http://deepblue.mpi-inf.mpg.de/api.html#api-chromosome
 print server.chromosomes("hgX", user_key)
 ```
 
-The ```add_genome``` command also creates an annotation containing all chromosomes and theirs sizes. The annotation name is the same of the genome. You can find the annotation using the [list_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-list_annotations):
+The ```add_genome``` command also creates an annotation containing all chromosomes and theirs sizes. The annotation name is the identical to the one of the genome. You can find the annotation using the [list_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-list_annotations):
 
 ```python
 print server.list_annotations("hgX", user_key)
 ```
 
-Use the commands [select_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-select_annotations) and [get_results](http://deepblue.mpi-inf.mpg.de/api.html#api-get_regions) for showing the genome annotation.
+Use the [select_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-select_annotations) and [get_results](http://deepblue.mpi-inf.mpg.de/api.html#api-get_regions) commands for obtaining genome annotation.
 
 ```python
 (s, chromosomes_annotation) = server.select_annotations("hgX", "hgX", None, None, None, user_key)
