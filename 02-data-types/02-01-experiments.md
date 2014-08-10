@@ -1,23 +1,22 @@
 ## Experiments
 
-All DeepBlue epigenomic data is organized into Experiments.  
+The Epigenomic data is organized as Experiments into DeepBlue.
+Each experiment is compound by a regions set and an associated metadata.
 
-An **Experiments** have the following attributes:
-  * Name - experiment name
-  * Genome - genome assembly used by this experiment. You can find more details in the **Genome** section
-  * Epigenetic mark - Epigenetic mark of the experiment. You can find more details in the **Epigenetic mark** section
-  * Sample - id of the sample, that is, a *bio_source* with more description on it. You can find more details in the **Sample** section
-  * Technique - technique used by this experiment. You can find more details in the **Technique** section
-  * Project - the project name. You can find more details in the **Project** section
-  * Description - experiment description
-  * extra_metadata - additional metadata. A key-value dictionary where the user can include extra information about the experiment.
-  * user - identification of the user that inserted the experiment.
+One Experiments has the following metadata information:
+  * *Name* - Experiment name - Should be unique
+  * *Genome* - genome assembly used by this experiment. More details in the [genomes](02-04-genomes.md) section
+  * *Epigenetic mark* - Epigenetic mark of the experiment. For example: methylation or some Histone Modification. More details in the [epigenetic marks](02-05-epigenetic-marks.md) section
+  * *Sample* - Identification of the sample that was used in this Experiment. More details in the [bio sources and samples](02-06-bio-sources.md) section
+  * *Technique* - Technique used by this experiment. For example: ChipSeq or DNaseSeq. More details in the [technique](02-08-techniques.md) section
+  * *Project* - Project that this experiment is associated. For example: ENCODE or Blueprint. More details in the [project](02-09-projects.md) section
+  * *Description* - Description of the experiment
+  * *Extra metadata* - Additional metadata. A key-value dictionary with extra information about the experiment
+  * *User* - User that inserted the experiment.
 
-It is possible to obtain all experiments that match one or more attributes using the command [list_experiments](http://deepblue.mpi-inf.mpg.de/api.html#api-list_experiments). 
-This command receives the genome assembly, epigenetic mark, sample id, technique, project, and the *user key* as parameters.
-All parameters, with exception *user key*, can be *None* (or the *null* value in your favorite programming language). Setting a parameter to *None* results in the most general setting for this parameter. #FM: is that correct? 
-
-For instance, it is possible to list all available experiments passing an empty string in all the parameters:
+The command [list_experiments](http://deepblue.mpi-inf.mpg.de/api.html#api-list_experiments) is used to obtain all experiments that match the given metadata content.
+This command has the genome assembly, epigenetic mark, sample id, technique, project, and the *user key* as parameters.
+All parameters, with exception *user key*, are optional. Setting a parameter to *None* means that this parameter will not be used for the  experiments selection. As an example, it is possible to list all experiments, from the genome assembly hg19, informing the genome assembly and using an empty string in all others metadata parameters:
 
 ```python
 import xmlrpclib
@@ -26,10 +25,10 @@ url = "http://deepblue.mpi-inf.mpg.de/xmlrpc"
 
 server = xmlrpclib.Server(url, encoding='UTF-8', allow_none=True)
 
-all_experiments = server.list_experiments(None, None, None, None, None, user_key)
+all_experiments = server.list_experiments("hg19", "", "", "", "", user_key)
 ```
 
-If we want to find all experiments from the human genome assembly *hg19*, the epigenetic mark *H3K27me3* from the *ENCODE* project:
+If we want to list all experiments from the human genome assembly *hg19*, the epigenetic mark *H3K27me3* from the *ENCODE* project:
 
 ```python
 import xmlrpclib
