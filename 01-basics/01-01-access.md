@@ -31,6 +31,12 @@ server.echo(None)
 
 The previous code should print: ```['okay', 'Deep Blue (0.9.5) says hi to a Stranger']```
 
+Some commands, for example [list_experiments](http://deepblue.mpi-inf.mpg.de/api.html#api-list_experiments), have some parameters that are optional. For that, it is possible to inform *None* (or the *null* value in your favorite programming language) or an empty string (```""```).
+The last line of the previous snipped can be rewritten as:
+```python
+server.echo("")
+```
+
 ### Commands Response
 
 The commands response are a tuple with two elements. The first elements is the status: returning ```okay``` when the command was successfully executed or ```error``` when a error occurred.
