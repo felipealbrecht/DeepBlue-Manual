@@ -1,6 +1,6 @@
 ## Experiments
 
-The Epigenomic data is organized as Experiments into DeepBlue.
+The Epigenomic data is organized as Experiments in DeepBlue.
 Each experiment is compound by a regions set and an associated metadata.
 
 One Experiments has the following metadata information:

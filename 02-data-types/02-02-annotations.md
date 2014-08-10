@@ -1,10 +1,11 @@
 ## Annotations
 
-The Annotations data type only has the *genome* and *user* attributes.
-They are used for storing regions that do not belongs to a specific epigenomic experiment, but to general annotation data.
-Examples of annotations are: CpG Islands and Genes. It is possible to list all available annotations using the [list_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-list_annotations) command. The *list_annotations* command has the parameters *genome* and *user key*.
+The auxiliary genomic regions data is organized as Annotations in DeepBlue.
+Each annotation is compound by a regions set, a name, *genome*, and *user* attributes.
 
-The following code shows how to retrieve a list of all annotations available for the genome assembly *hg19*:
+Annotations are used to store genomic regions that does not come from an epigenomic experiment, but contains others (epi-)genetic information. Examples of annotations are: CpG Islands and Genes. It is possible to list all available annotations using the [list_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-list_annotations) command. The *list_annotations* command has two parameters: *genome* and *user key*.
+
+The following snipped shows how to list of all annotations available for the genome assembly *hg19*:
 
 ```python
 import xmlrpclib
