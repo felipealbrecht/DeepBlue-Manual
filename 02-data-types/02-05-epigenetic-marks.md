@@ -1,6 +1,6 @@
 ## Epigenetic Marks
 
-The epigenetic mark controlled vocabulary contains epigenetic modifications and variations. Examples for epigenetic marks are DNA Methylation, DNaseI hypersensitive sites, mRNA, Histone Variants and Post-translational modification. We also included Chromatin State Segmentation as a epigenetic mark.
+The epigenetic marks controlled vocabulary contains epigenetic modifications and variations. Examples for epigenetic marks are DNA Methylation, DNaseI hypersensitive sites, mRNA, Histone Variants and Post-translational modification. We also included Chromatin State Segmentation as a epigenetic mark.
 
 The command [list_epigenetic_marks](http://deepblue.mpi-inf.mpg.de/api.html#api-list_epigenetic_marks) is used to list all epigenetic marks included in DeepBlue:
 

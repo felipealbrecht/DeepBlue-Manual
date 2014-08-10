@@ -1,6 +1,6 @@
 ## Genomes
 
-The Genomes controlled vocabulary contains the names, descriptions, and chromosome names and sizes for different genomes assemblies.
+The genomes controlled vocabulary contains the names, descriptions, and chromosome names and sizes for different genomes assemblies.
 Originally, DeepBlue contains the assembly *hg19*, but new genome assemblies can be easily inserted using the [add_genome](http://deepblue.mpi-inf.mpg.de/api.html#api-add_genome) command. The following code example shows how to insert a new genome assembly with the chromosomes names and sizes.
 The variable ```genome_data``` contains a text, where each line has the chromosome name and its size.
 
