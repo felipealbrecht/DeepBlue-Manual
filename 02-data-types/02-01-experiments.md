@@ -7,7 +7,7 @@ One Experiments has the following metadata information:
   * *Name* - Experiment name - Should be unique
   * *Genome* - genome assembly used by this experiment. More details in the [genomes](02-04-genomes.md) section
   * *Epigenetic mark* - Epigenetic mark of the experiment. For example: methylation or some Histone Modification. More details in the [epigenetic marks](02-05-epigenetic-marks.md) section
-  * *Sample* - Identification of the sample that was used in this Experiment. More details in the [bio sources and samples](02-06-bio-sources.md) section
+  * *Sample* - Identification of the sample that was used in this Experiment. More details in the [bio-sources and samples](02-06-bio-sources.md) section
   * *Technique* - Technique used by this experiment. For example: ChipSeq or DNaseSeq. More details in the [technique](02-08-techniques.md) section
   * *Project* - Project that this experiment is associated. For example: ENCODE or Blueprint. More details in the [project](02-09-projects.md) section
   * *Description* - Description of the experiment

@@ -1,4 +1,4 @@
-## Inserting Bio Source
+## Inserting BioSource
 
 The [add_bio_source](http://deepblue.mpi-inf.mpg.de/api.html#api-add_bio_source) requires the ```name```, ```description```, and ```extra_metadata```.
 

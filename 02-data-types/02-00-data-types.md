@@ -10,7 +10,7 @@ Every Experiment included into DeepBlue contains at least 6 data fields, that ar
  * Experiment Name
  * Genome Assembly
  * Epigenetic Mark
- * Bio Source
+ * Bio-Source
  * Project
  * Technique
 

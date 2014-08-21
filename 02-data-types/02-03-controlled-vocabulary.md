@@ -3,7 +3,7 @@ We define a controlled vocabulary by a collection of unique terms from the same 
 DeepBlue has 5 different controlled vocabularies, each one from an context:
  * Genomes
  * Epigenetic Marks
- * Bio Sources
+ * BioSources
  * Techniques
  * Projects
 

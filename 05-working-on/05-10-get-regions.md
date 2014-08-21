@@ -4,7 +4,7 @@ The command [get_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-get_region
 
 The format is the name of the fields that were given in the [add_experiment](http://deepblue.mpi-inf.mpg.de/api.html#api-add_experiment) and [add_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-add_annotation).
 
-First example - Retrieving all regions from chromosome 1, blood as bio source, epigenetic mark methylation, and "karyotype: cancer" in the sample:
+First example - Retrieving all regions from chromosome 1, blood as biosource, epigenetic mark methylation, and "karyotype: cancer" in the sample:
 
 ```python
 (status, blood_related) = server.get_bio_source_related("blood", user_key)
@@ -23,8 +23,8 @@ print regions
 
 ### Metafields
 
-Metafields are fields used to obtain more information about the retrieved region. 
-It is possible to obtain the region experiment name, or region length. 
+Metafields are fields used to obtain more information about the retrieved region.
+It is possible to obtain the region experiment name, or region length.
 The following table show all metafields that work directly in the region experiment metadata:
 
 | Metafield Name   | Data Type              |
@@ -33,10 +33,10 @@ The following table show all metafields that work directly in the region experim
 | @LENGTH          | Region Length          |
 | @EPIGENETIC_MARK | Region Epigenetic Mark |
 | @PROJECT         | Region Project Name    |
-| @BIO_SOURCE      | Region Bio Source Name |
+| @BIO_SOURCE      | Region BioSource Name |
 | @SAMPLE_ID       | Region Sample ID       |
 
-From the previous example, but now returning the Experiment Name, Length and Bio Source Name:
+From the previous example, but now returning the Experiment Name, Length and BioSource Name:
 
 ```python
 (status, regions) = server.get_regions(query_id, "CHROMOSOME,START,END,@NAME,@LENGTH,@BIO_SOURCE", user_key)
