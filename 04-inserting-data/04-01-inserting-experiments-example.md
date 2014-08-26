@@ -15,6 +15,7 @@ data_splited = [x for x in data_splited if x]  # Remove empty lines
 data_splited.sort()
 sorted_data = "\n".join(data_splited)
 
+
 # Setting metadata
 name = "wgEncodeHaibMethyl450Ag04450SitesRep1"
 genome = "hg19"
@@ -25,10 +26,10 @@ sample = samples[0]
 technique = "Infinium 450k"
 project = "Encode"
 description = "Some example"
-extra_metadata = {"dateSubmitted":"2011-09-29", "replicate":"1" :"size":8.7M"}
+extra_metadata = {"dateSubmitted":"2011-09-29", "replicate":"1" :"size":"8.7M"}
 
 # File format
-format = 'NAME,SCORE,STRAND,THICK_START,THICK_END,ITEM_RGB'
+format = "NAME,SCORE,STRAND,THICK_START,THICK_END,ITEM_RGB"
 
 # Inserting
 (status, _id) = server.add_experiment(name, genome, epigenetic_mark, sample, technique, project, description, sorted_data, format, extra_metadata, user_key)

@@ -1,6 +1,7 @@
 # Future
 
 Some planned features:
+ * Web Page
  * Access Restrictions
  * Asynchronous operations
  * Open source

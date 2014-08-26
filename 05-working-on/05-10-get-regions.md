@@ -1,6 +1,6 @@
 ## Get Regions
 
-The command [get_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-get_regions) is used for retrieving the sequences from the server. The command parameters are the ```query id``` and the ```format```.
+The command [get_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-get_regions) is used for retrieving the sequences from the server. The command parameters are the ```query_id``` and the ```format```.
 
 The format is the name of the fields that were given in the [add_experiment](http://deepblue.mpi-inf.mpg.de/api.html#api-add_experiment) and [add_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-add_annotation).
 
@@ -11,7 +11,6 @@ First example - Retrieving all regions from chromosome 1, blood as biosource, ep
 blood_related_names = [x[1] for x in blood_related]
 
 (status, blood_samples) = server.list_samples(blood_related_names, {"karyotype":"cancer"}, user_key)
-
 blood_samples_ids = [x[0] for x in blood_samples]
 
 (status, query_id) = server.select_regions(None, "hg19", "Methylation", blood_samples_ids, None, None, "chr1", None, None, user_key)
