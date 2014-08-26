@@ -5,11 +5,11 @@ In this example we will insert an experiment from ENCODE project. Remark: that t
 ```python
 import gzip
 
-# Reading 
+# Reading
 f = gzip.open("wgEncodeHaibMethyl450Ag04449SitesRep1.bed.gz", 'rb')
 data = f.read()
 
-# Even DeepBlue accepts no sorted Bed Files, sorting them will make the insertion process *much faster* 
+# Even DeepBlue accepts no sorted Bed Files, sorting them will make the insertion process *much faster*
 data_splited = data.split("\n")
 data_splited = [x for x in data_splited if x]  # Remove empty lines
 data_splited.sort()
