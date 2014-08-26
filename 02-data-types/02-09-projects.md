@@ -5,10 +5,7 @@ DeepBlue encompasses the ENCODE and Blueprint projects.
 
 It is possible to list all projects with the [list_projects](http://deepblue.mpi-inf.mpg.de/api.html#api-list_projects) command:
 ```python
-server.list_projects(user_key)
-```
-
-```python
+>>> server.list_projects(user_key)
 ['okay', [['p1', 'ENCODE'], ['p2', 'Blueprint Epigenetics']]]
 ```
 

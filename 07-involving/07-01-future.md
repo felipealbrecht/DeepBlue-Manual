@@ -4,4 +4,4 @@ Some planned features:
  * Access Restrictions
  * Asynchronous operations
  * Open source
- * Data with single base pair resolution
+ * Change the Column Type's *ignore_if* to *default_value*
