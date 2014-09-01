@@ -53,7 +53,7 @@ From a data organization perspective, **Samples are BioSources with metadata**.
 The metadata may contain any kind of information about the source such as organism, laboratory, age, karyotype, cell lineage, strain, date, donor sex, donor ethnicity. The metadata fields are very flexible and it is recommended to include all sample information inside there. We try to include as much metadata as possible during a sample's import process.
 
 The sample metadata fields should be included before using the command [add_sample_field](http://deepblue.mpi-inf.mpg.de/api.html#api-add_sample_field).
-The necessary information to create a new field are the field name, the type (string or numeral), description, and the user key.
+The necessary information to create a new field are the field name, the type (string or numeral), description, and the *user_key*.
 An error message will be returned if a field with the same name already exists.
 It is possible to list all similar field names using the command [list_similar_sample_fields](http://deepblue.mpi-inf.mpg.de/api.html#api-list_similar_sample_fields), as well, listing all sample fields with the command [list_sample_fields](http://deepblue.mpi-inf.mpg.de/api.html#api-list_sample_fields).
 

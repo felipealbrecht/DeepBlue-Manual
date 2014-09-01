@@ -12,7 +12,7 @@
    * [Genomes](02-data-types/02-04-genomes.md)
    * [Epigenetic Marks](02-data-types/02-05-epigenetic-marks.md)
    * [BioSources and Samples](02-data-types/02-06-biosources.md)
-   * [Example: Obtaining all experiments from a BioSource](02-data-types/02-07-example-experiment-biosource.md)
+   * [Example: Obtaining all Experiments from a BioSource](02-data-types/02-07-example-experiment-biosource.md)
    * [Techniques](02-data-types/02-08-techniques.md)
    * [Projects](02-data-types/02-09-projects.md)
    * [Data Identification](02-data-types/02-10-data-identifier.md)

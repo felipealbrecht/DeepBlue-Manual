@@ -3,20 +3,20 @@
 
 
 # DeepBlue Epigenomic Data Server Manual - DRAFT
-This manual presents DeepBlue, their commands, examples, and usage advices.
-Please, make a short read before using DeepBlue.
-We also provide a reference guide in the [DeepBlue API Reference Guide](http://deepblue.mpi-inf.mpg.de/api.html) that contains a list of all DeepBlue commands. This list is updated automatically when new commands are added or modified.
+This manual presents DeepBlue, commands, examples, and usage advice.
+Please, read this manual before using DeepBlue.
+We also provide a reference guide in the [DeepBlue API Reference Guide](http://deepblue.mpi-inf.mpg.de/api.html) that contains a list of all DeepBlue commands. This list is updated automatically when commands are added or modified.
 
-## Disclaimer
+#### Disclaimer
 
-DeepBlue is work in progress. The API and data can (and probably will) change.
+DeepBlue is a work in progress. The API and data can (and probably will) change.
 
 
 #### Data
 
-DeepBlue only imports public data available.
+DeepBlue only imports publicly available data.
 
-Uploading data to the DeepBlue will make your data accessible for others users.
+Uploading data to DeepBlue will make your data accessible to other users.
 
 #### License
 

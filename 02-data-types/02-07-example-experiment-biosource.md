@@ -1,6 +1,6 @@
-### Example: Obtaining all experiments from a BioSource
+### Example: Obtaining all Experiments from a BioSource
 
-The following code is an example of how to select all samples from the colon tissue, and after, how to list all experiments from the selected samples.
+The following code is an example of how to select all samples from the colon tissue, and after, how to list all Experiments from the selected samples.
 
 ```python
 (s, related) = server.get_bio_source_related("colon", user_key)

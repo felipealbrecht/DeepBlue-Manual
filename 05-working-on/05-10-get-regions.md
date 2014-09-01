@@ -23,8 +23,8 @@ print regions
 ### Metafields
 
 Metafields are fields used to obtain more information about the retrieved region.
-It is possible to obtain the region experiment name, or region length.
-The following table show all metafields that work directly in the region experiment metadata:
+It is possible to obtain the length and Experiment name of a given region.
+The following table show all metafields that work directly with the regions' Experiment metadata:
 
 | Metafield Name   | Data Type              |
 |------------------|------------------------|

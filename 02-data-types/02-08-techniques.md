@@ -1,6 +1,6 @@
 ## Techniques
 
-The technique data type contains information on experimental techniques thereby refining the epigenetic mark annotation.
+The technique data type contains information on experimental techniques thereby refining the epigenetic mark metadata.
 The technique controlled vocabulary contains the technique name and its description.
 
 The command [list_techniques](http://deepblue.mpi-inf.mpg.de/api.html#api-list_techniques) lists all techniques included into DeepBlue:

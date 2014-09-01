@@ -1,8 +1,8 @@
 ## Selecting Annotations
 
-The [select_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-select_annotations) receive the name of one or more annotations, the genome, chromosomes, start, and end positions. Any combination of these parameters is possible.
+The [select_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-select_annotations) receive the name of one or more Annotations, the Genome, Chromosomes, Start, and End positions. Any combination of these parameters is possible.
 
-First example: selecting the CpG Island annotation
+First example: selecting the CpG Island Annotation
 ```python
 (s, cpg_island) = server.select_annotations("Cpg Islands", "hg19", None, None, None, user_key)
 ```

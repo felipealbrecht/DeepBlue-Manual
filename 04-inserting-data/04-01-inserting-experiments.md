@@ -1,15 +1,15 @@
 ## Inserting Experiment
 
 
-The experiments use all controlled vocabularies for their metadata. For that, before inserting a new experiment, make sure that you have parameters required by the [add_experiment](http://deepblue.mpi-inf.mpg.de/api.html#api-add_experiment) command:
+The Experiments use all controlled vocabularies for their metadata. For that, before inserting a new Experiment, make sure that you have parameters required by the [add_experiment](http://deepblue.mpi-inf.mpg.de/api.html#api-add_experiment) command:
 
  * Name - Experiment name. Unique by user.
  * Genome - Genome assembly
  * Epigenetic Mark
  * Sample - Sample id - Use [list_samples](http://deepblue.mpi-inf.mpg.de/api.html#api-list_samples) or [search](http://deepblue.mpi-inf.mpg.de/api.html#api-search)
- * Technique - Technique used by the experiment
- * Project - Project where this experiment belongs
- * Description - Free text field where the experiment should be described
+ * Technique - Technique used by the Experiment
+ * Project - Project where this Experiment belongs
+ * Description - Free text field where the Experiment should be described
  * Data - epigenomic data in BED, BEDGRAPH, or WIG format.
  * Format - The file format description
  * Extra metadata - Extra information in the key-value format. Use to include metadata that does not belong to any controlled vocabularies.
@@ -21,7 +21,7 @@ The data must be in the [Bed](http://genome.ucsc.edu/FAQ/FAQformat.html#format1)
 
 ### BED Data format
 
-When inserting an experiment in [BED](http://genome.ucsc.edu/FAQ/FAQformat.html#format1) format, the  ```format``` parameter should describes the data content.
+When inserting an Experiment in [BED](http://genome.ucsc.edu/FAQ/FAQformat.html#format1) format, the  ```format``` parameter should describes the data content.
 The format contains the the fields names separated by comma (,) where each field must have a ```name```, ```type```. An optional value, named ```ìgnore_if```, can be used to the a value that should be ignored. Remember that the [BED](http://genome.ucsc.edu/FAQ/FAQformat.html#format1) format use tabs (for separating the fields.
 
 Lets see the following BED file:
@@ -42,14 +42,14 @@ The field content is firstly analyzed lexically. The ```Value``` content should 
 
 Even this format is valid, it is not the recommended way for describing BED files.
 The problem of with this format is the fields names and types.
-For example, an user can insert an experiment where the ```Value``` is a Integer,
-while another user can insert another experiment where the ```Value``` is a double.
-Also, different experiments can have different names for a fields with the same semantic, for instance *chromosome*, that could be defined as ```chrom```, ```chr```, or ```chromosome```.
+For example, an user can insert an Experiment where the ```Value``` is a Integer,
+while another user can insert another Experiment where the ```Value``` is a double.
+Also, different Experiments can have different names for a fields with the same semantic, for instance *chromosome*, that could be defined as ```chrom```, ```chr```, or ```chromosome```.
 For helping to solve the column names ambiguity,  DeepBlue has the ```Column Types``` data type.
 
 #### Columns Types
 
-DeepBlue provides ```Column Types``` data type for predefining columns names and theirs respective types. They should be used to insert an experiment or annotation. Using ```Column Types``` is simples, only needing to inform the ```Column Type``` name. For example, the format defined by ```"Chromosome:String,Start:Integer,End:Integer,Value:Double:0.0"```can be rewrite by ```CHROMOSOMO,START,END,VALUE```.
+DeepBlue provides ```Column Types``` data type for predefining columns names and theirs respective types. They should be used to insert an Experiment or Annotation. Using ```Column Types``` is simples, only needing to inform the ```Column Type``` name. For example, the format defined by ```"Chromosome:String,Start:Integer,End:Integer,Value:Double:0.0"```can be rewrite by ```CHROMOSOMO,START,END,VALUE```.
 
 A ```Column Types``` must be previously created before being used. Each ```Column Type``` contains the 3 information that were defined directly in the BED format field:
 
@@ -102,7 +102,7 @@ The standard [BED format](http://genome.ucsc.edu/FAQ/FAQformat.html#format1) has
 ```
 
 It is possible to inspect the Experiment format using the [info](http://deepblue.mpi-inf.mpg.de/api.html#api-info) command.
-In the following example, we [search](http://deepblue.mpi-inf.mpg.de/api.html#api-search) for all experiments that contains "methylation" and "blood" in their medatada, get their full information using the [info](http://deepblue.mpi-inf.mpg.de/api.html#api-info) command, and print the name and format:
+In the following example, we [search](http://deepblue.mpi-inf.mpg.de/api.html#api-search) for all Experiments that contains "methylation" and "blood" in their medatada, get their full information using the [info](http://deepblue.mpi-inf.mpg.de/api.html#api-info) command, and print the name and format:
 
 ```python
 (s, experiments) = server.search("\"methylation\" \"blood\"", "experiments", user_key)

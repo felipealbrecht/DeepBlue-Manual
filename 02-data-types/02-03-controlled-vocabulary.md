@@ -1,10 +1,10 @@
 ## Controlled Vocabulary
-We define a controlled vocabulary by a collection of unique terms from the same context, that each term contains a name, description, and if necessary, more attributes.
-DeepBlue has 5 different controlled vocabularies, each one from an context:
+We define a controlled vocabulary as a collection of unique terms from the same context such, that each term contains a name, description, and if necessary, more attributes.
+DeepBlue has 5 different controlled vocabularies, one for each of the following contexts:
  * Genomes
  * Epigenetic Marks
  * BioSources
  * Techniques
  * Projects
 
-These controlled vocabularies are used for describing [experiments](02-01-experiments.md) and the Genomes controlled vocabulary is used in the [annotations](02-02-annotations.md).
+These controlled vocabularies are used for describing [Experiments](02-01-experiments.md) and the Genomes controlled vocabulary is used by the [Annotations](02-02-annotations.md).
