@@ -4,7 +4,7 @@ The command [get_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-get_region
 
 The format is the name of the fields that were given in the [add_experiment](http://deepblue.mpi-inf.mpg.de/api.html#api-add_experiment) and [add_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-add_annotation).
 
-First example - Retrieving all regions from chromosome 1, blood as biosource, epigenetic mark methylation, and "karyotype: cancer" in the sample:
+First example - Retrieving all regions from chromosome 1, *blood* as BioSource, *methylation* as Epigenetic Mark , and contains the key *karyotype* with the value *cancer* in the sample:
 
 ```python
 (status, blood_related) = server.get_bio_source_related("blood", user_key)

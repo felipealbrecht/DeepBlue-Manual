@@ -45,7 +45,7 @@ The commands ```select_annotations``` and ```get_regions``` will be explained in
 
 DeepBlue also stores genomic sequences from the Genome assemblies that can be used for data filtering and analysis. The sequences of ```hg19``` genome assembly chromosomes are already included in DeepBlue.
 
-The [uploada_chromosome](http://deepblue.mpi-inf.mpg.de/api.html#api-upload_chromosome) command is available to upload genomic sequences for others Genome assemblies:
+The [uploada_chromosome](http://deepblue.mpi-inf.mpg.de/api.html#api-upload_chromosome) command is used to upload the genomic sequences of other Genome assemblies:
 ```python
 # Example sequence!
 data = "ACTGACTGCG" * 100000
@@ -53,4 +53,4 @@ print server.upload_chromosome("hgX", "chr1", data, user_key)
 ```
 The [Working with Sequences](../06-sequences/06-01-obtaining-region-sequences) section discusses how to access and use the genomic sequences.
 
-A list of all possible commands that can be applied on Genomes Controlled Vocabulary is available at [DeepBlue API - Inserting and listing Genomes](http://deepblue.mpi-inf.mpg.de/api.html#api-genomes).
+A list of all possible commands that can be applied within the Genomes controlled vocabulary is available at [DeepBlue API - Inserting and listing Genomes](http://deepblue.mpi-inf.mpg.de/api.html#api-genomes).
