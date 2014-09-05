@@ -73,4 +73,4 @@ The command [list_samples](http://deepblue.mpi-inf.mpg.de/api.html#api-list_samp
 server.list_samples(None, {"tier":"3"}, user_key)
 ```
 
-Attention: Not all samples have a *tier* in their metadata: it depends on the source from which the data was imported.
+NB: Not all samples have a *tier* in their metadata: it depends on the source from which the data was imported.
