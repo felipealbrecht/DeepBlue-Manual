@@ -1,9 +1,9 @@
 ## Data Identifier
 
-Each datum that composes the DeepBlue data contains an unique identifier.
+Each datum in DeepBlue possesses a unique identifier.
 This identifier is returned in all listing, search, query, and insert operations.
 The identifiers can be divided into two parts: the prefix, that is one or two letters,
-meaning the data type, and a numeric value.
+indicating the data type, and a numeric value.
 
 The following table contains the identifier prefixes and their data type:
 
@@ -25,7 +25,7 @@ server.info("e1", user_key)
 ```
 
 
-We can use [info](http://deepblue.mpi-inf.mpg.de/api.html#api-info) command for viewing the samples content:
+We can use the [info](http://deepblue.mpi-inf.mpg.de/api.html#api-info) command to view the samples' contents:
 
 ```python
 (s, related) = server.get_bio_source_related("blood", user_key)
@@ -33,7 +33,7 @@ related_names = [x[1] for x in related] # get the BioSource names
 (s, samples) = server.list_samples(related_names, {}, user_key)
 samples_id = [x[0] for x in samples] # get samples id
 
-for _id in samples_id[:20] : # the first 5 samples
+for _id in samples_id[:20] : # the first 20 samples
  print  server.info(_id, user_key)
 ```
 
