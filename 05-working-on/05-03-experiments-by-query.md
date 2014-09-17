@@ -1,6 +1,6 @@
 ## Experiments by Query
 
-[Previously](05-02-selection-experiments.md), we selected all Experiments that matched a set of parameters. DeepBlue provides the command [get_experiments_by_query](http://deepblue.mpi-inf.mpg.de/api.html#api-get_experiments_by_query) to know which Experiments where selected by the [select_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-select_regions) command.
+In a [previous section](05-02-selection-experiments.md), we selected all Experiments that matched a set of parameters. DeepBlue provides the command [get_experiments_by_query](http://deepblue.mpi-inf.mpg.de/api.html#api-get_experiments_by_query) to findout which experiments were selected by the [select_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-select_regions) command.
 
 ```python
 >>> (status, experiments) = server.get_experiments_by_query(query_id, user_key)

@@ -1,6 +1,7 @@
-## Selection Experiments
+## Selecting Experiments
 
-To [select_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-select_regions) is used to select the Experiments data. The [select_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-select_regions) is similar to [select_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-select_annotations). The difference is that [select_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-select_regions) accepts ```epigenetic_mark```, ```sample```, ```technique```, and ```project```.
+The [select_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-select_regions) command is used to access the experiments' data.
+The [select_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-select_regions) command is similar to [select_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-select_annotations). The difference is that [select_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-select_regions) accepts ```epigenetic_mark```, ```sample```, ```technique```, and ```project``` parameters.
 
 
 ### Selecting Experiments example
