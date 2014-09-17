@@ -76,7 +76,7 @@ Three commands are available to create insert a ```column_type``:
  server.create_column_type_range("NORMALIZED_SCORE", "Normalized Score", -1.0, 1.0, user_key)
  ```
 
-For consistency, please, always use capital letters for the ```Column Type``` name.
+For consistency, please always use capital letters for the ```Column Type``` name.
 
 As DeepBlue already contains pre-defined ```column_types```,  it should hardly be necessary to insert new ```column_types```.
 Use the command [list_column_types](http://deepblue.mpi-inf.mpg.de/api.html#api-list_column_types) to list all ```column_types``` included in DeepBlue:

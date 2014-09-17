@@ -1,23 +1,23 @@
 ## Aggregation
 
-DeepBlue can [aggregate](http://deepblue.mpi-inf.mpg.de/api.html#api-aggregate) groups of regions into bigger regions.
-The [aggregate](http://deepblue.mpi-inf.mpg.de/api.html#api-aggregate) needs 3 parameters: `query_data_id`, `query_regions_id`, and the data column name that will be the aggregation pivot	.
+DeepBlue can [aggregate](http://deepblue.mpi-inf.mpg.de/api.html#api-aggregate) groups of regions into larger regions.
+The [aggregate](http://deepblue.mpi-inf.mpg.de/api.html#api-aggregate) command requires three parameters: `query_data_id`, `query_regions_id`, and the data column name that will be the aggregation pivot	.
 
-It is possible to retrieve the aggregation result by the Aggregation Metafield:
-
+It is possible to retrieve the aggregation result with the aggregation metafield:
 
 | Aggregation Command | Description                |
 |---------------------|----------------------------|
-| @AGG.MIN            | Regions Min Value          |
-| @AGG.MAX            | Regions Min Value          |
-| @AGG.MEDIAN         | Regions Median             |
-| @AGG.MEAN           | Regions Mean               |
-| @AGG.VAR            | Regions Variance           |
-| @AGG.SD             | Regions Standard Deviation |
+| @AGG.MIN            | Regions minimum value      |
+| @AGG.MAX            | Regions maximum value      |
+| @AGG.MEDIAN         | Regions median value       |
+| @AGG.MEAN           | Regions mean               |
+| @AGG.VAR            | Regions variance           |
+| @AGG.SD             | Regions standard deviation |
 | @AGG.COUNT          | Regions count              |
 
 
-In the following example we are aggregating the retrieve data into tiling regions of the length 100000, and in the end we remove the aggregated regions that does not contain any region.
+In the following example we will aggregate the retrieved data into tiling regions of length 100000.
+In the end we remove the aggregated regions that do not contain any region.
 
 ```python
 (status, blood_related) = server.get_bio_source_related("blood", user_key)

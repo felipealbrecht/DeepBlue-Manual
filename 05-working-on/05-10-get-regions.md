@@ -1,10 +1,11 @@
 ## Get Regions
 
-The command [get_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-get_regions) is used for retrieving the sequences from the server. The command parameters are the ```query_id``` and the ```format```.
+The command [get_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-get_regions) is used for retrieving sequences from the server.
+The command parameters are the ```query_id``` and the ```format```.
 
 The format is the name of the fields that were given in the [add_experiment](http://deepblue.mpi-inf.mpg.de/api.html#api-add_experiment) and [add_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-add_annotation).
 
-First example - Retrieving all regions from chromosome 1, *blood* as BioSource, *methylation* as Epigenetic Mark , and contains the key *karyotype* with the value *cancer* in the sample:
+*Example:* Retrieving all regions from chromosome 1, *blood* as BioSource, *methylation* as Epigenetic Mark , and contains the key *karyotype* with the value *cancer* in the sample:
 
 ```python
 (status, blood_related) = server.get_bio_source_related("blood", user_key)
@@ -23,19 +24,19 @@ print regions
 ### Metafields
 
 Metafields are fields used to obtain more information about the retrieved region.
-It is possible to obtain the length and Experiment name of a given region.
-The following table show all metafields that work directly with the regions' Experiment metadata:
+It is possible to obtain the region length and the name of the experiment of the given region.
+The following table shows all metafields in the regions experiment metadata:
 
 | Metafield Name   | Data Type              |
 |------------------|------------------------|
-| @NAME            | Region Experiment Name |
-| @LENGTH          | Region Length          |
-| @EPIGENETIC_MARK | Region Epigenetic Mark |
-| @PROJECT         | Region Project Name    |
-| @BIO_SOURCE      | Region BioSource Name |
-| @SAMPLE_ID       | Region Sample ID       |
+| @NAME            | Region experiment name |
+| @LENGTH          | Region length          |
+| @EPIGENETIC_MARK | Region epigenetic mark |
+| @PROJECT         | Region project name    |
+| @BIO_SOURCE      | Region biosource name  |
+| @SAMPLE_ID       | Region sample id       |
 
-From the previous example, but now returning the Experiment Name, Length and BioSource Name:
+Ai in the previous example, but now returning the experiment name, length and biosource name:
 
 ```python
 (status, regions) = server.get_regions(query_id, "CHROMOSOME,START,END,@NAME,@LENGTH,@BIO_SOURCE", user_key)

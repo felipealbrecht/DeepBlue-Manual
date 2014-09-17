@@ -12,7 +12,7 @@ chrX 100000"""
 print server.add_genome("hgX", "Example of Genome for the Manual", genome_data, user_key)
 ```
 
-Please, be aware that not all users have permissions to insert a new genome into DeepBlue.
+Please be aware that not all users have permissions to insert a new genome into DeepBlue.
 
 The command [chromosomes](http://deepblue.mpi-inf.mpg.de/api.html#api-chromosomes) lists all the names and sizes of the chromosomesof a genome assembly:
 ```python

@@ -16,4 +16,4 @@ print server.echo(user_key)
 ```
 
 The ```echo``` command should return: ```['okay', 'Deep Blue (0.9.5) says hi to Your Name']```.
-Please, verify your *user_key* if the command returned ```['okay', 'Deep Blue (0.9.5) says hi to a Stranger']```.
+Please verify your *user_key* if the command returned ```['okay', 'Deep Blue (0.9.5) says hi to a Stranger']```.

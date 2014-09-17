@@ -4,7 +4,7 @@
 
 # DeepBlue Epigenomic Data Server Manual - DRAFT
 This manual presents DeepBlue, commands, examples, and usage advice.
-Please, read this manual before using DeepBlue.
+Please read this manual before using DeepBlue.
 We also provide a reference guide in the [DeepBlue API Reference Guide](http://deepblue.mpi-inf.mpg.de/api.html) that contains a list of all DeepBlue commands. This list is updated automatically when commands are added or modified.
 
 #### Disclaimer
