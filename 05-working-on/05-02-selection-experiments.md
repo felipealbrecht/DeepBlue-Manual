@@ -7,17 +7,17 @@ The [select_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-select_regions)
 ### Selecting Experiments example
 
 
-Example of selecting all Experiments that contains samples. The ```query_id``` will be utilized by the others data operation commands.
+*Example:*
+Firstly, we use the [get_bio_source_related](http://deepblue.mpi-inf.mpg.de/api.html#api-get_bio_source_related) command to retrieve all bio sources related with the term "blood" and then we select only the BioSources names from the ```blood_related``` list.
+After, we select all samples from these BioSources names and get their ids.
+In the end, we select all ```chromosome``` *chr1* regions from the experiments that have ```genome``` *hg19*, ```epigenetic_mark``` *Methylation* and the found samples and we print the chromosome, start, and end of these regions.
 
 ```python
 (status, blood_related) = server.get_bio_source_related("blood", user_key)
 blood_related_names = [x[1] for x in blood_related]
-
 (status, blood_samples) = server.list_samples(blood_related_names, {"karyotype":"cancer"}, user_key)
-
 blood_samples_ids = [x[0] for x in blood_samples]
-
 (status, query_id) = server.select_regions(None, "hg19", "Methylation", blood_samples_ids, None, None, "chr1", None, None, user_key)
-
-(status, info) = server.info(query_id, user_key)
+(status, regions) = server.get_regions(query_id, "CHROMOSOME, START, END", user_key)
+print regions
 ```
