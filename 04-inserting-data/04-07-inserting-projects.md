@@ -1,6 +1,6 @@
 ## Inserting Project
 
-The [add_project](http://deepblue.mpi-inf.mpg.de/api.html#api-add_project) requires the  ```name``` and ```description```.
+The [add_project](http://deepblue.mpi-inf.mpg.de/api.html#api-add_project) command requires the  ```name``` and ```description``` parameters.
 
 
 ```python

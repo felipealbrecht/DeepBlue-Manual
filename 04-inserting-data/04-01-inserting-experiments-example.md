@@ -1,6 +1,6 @@
-### Example: Inserting Experiment
+### Example: Inserting an Experiment
 
-In this example we will insert an Experiment from ENCODE project. Remark: it is just an example, this Experiment is already included in DeepBlue.
+In this example we will insert an Experiment from the ENCODE project. Note: it is just an example, this Experiment is already included in DeepBlue.
 
 ```python
 import gzip
@@ -9,11 +9,11 @@ import gzip
 f = gzip.open("wgEncodeHaibMethyl450Ag04449SitesRep1.bed.gz", 'rb')
 data = f.read()
 
-# Even DeepBlue accepts no sorted BED Files, sorting them will make the insertion process *much faster*
-data_splited = data.split("\n")
-data_splited = [x for x in data_splited if x]  # Remove empty lines
-data_splited.sort()
-sorted_data = "\n".join(data_splited)
+# Even though DeepBlue accepts unsorted BED files, sorting them will make the insertion process *much faster*
+data_split = data.split("\n")
+data_split = [x for x in data_splited if x]  # Remove empty lines
+data_split.sort()
+sorted_data = "\n".join(data_split)
 
 
 # Setting metadata
@@ -36,7 +36,7 @@ format = "NAME,SCORE,STRAND,THICK_START,THICK_END,ITEM_RGB"
 
 # Checking result
 if (status == "okay"):
- print "Experiment " + _id + "successfully inserted"
+ print "Experiment " + _id + " successfully inserted"
 else:
  print "Problem inserting the experiment " + name + " : " + _id
 ```
