@@ -1,11 +1,11 @@
 ## Get Regions
 
 The command [get_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-get_regions) is used for retrieving sequences from the server.
-The command parameters are the ```query_id``` and the ```format```.
+The command parameters are the ``query_id`` and the ``format``.
 
 The format is the name of the fields that were given in the [add_experiment](http://deepblue.mpi-inf.mpg.de/api.html#api-add_experiment) and [add_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-add_annotation).
 
-*Example:* Retrieving all regions from chromosome 1, *blood* as BioSource, *methylation* as Epigenetic Mark , and contains the key *karyotype* with the value *cancer* in the sample:
+*Example:* Retrieving all regions from chromosome 1, *blood* as biosource, *methylation* as epigenetic mark , and containing the key *karyotype* with the value *cancer* in the sample:
 
 ```python
 (status, blood_related) = server.get_bio_source_related("blood", user_key)
@@ -36,7 +36,7 @@ The following table shows all metafields in the regions experiment metadata:
 | @BIO_SOURCE      | Region biosource name  |
 | @SAMPLE_ID       | Region sample ID       |
 
-Ai in the previous example, but now returning the experiment name, length and BioSource name:
+The next example works as the previous one, but now returning the experiment name, length and BioSource name:
 
 ```python
 (status, regions) = server.get_regions(query_id, "CHROMOSOME,START,END,@NAME,@LENGTH,@BIO_SOURCE", user_key)

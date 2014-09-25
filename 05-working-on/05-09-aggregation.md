@@ -1,7 +1,7 @@
 ## Aggregation
 
 DeepBlue can [aggregate](http://deepblue.mpi-inf.mpg.de/api.html#api-aggregate) groups of regions into larger regions.
-The [aggregate](http://deepblue.mpi-inf.mpg.de/api.html#api-aggregate) command requires three parameters: `query_data_id`, `query_regions_id`, and the data column name that will be the aggregation pivot	.
+The [aggregate](http://deepblue.mpi-inf.mpg.de/api.html#api-aggregate) command requires three parameters: `query_data_id`, `query_regions_id`, and the data column name that will be the aggregation pivot.
 
 It is possible to retrieve the aggregation result with the aggregation metafield:
 
@@ -16,8 +16,8 @@ It is possible to retrieve the aggregation result with the aggregation metafield
 | @AGG.COUNT          | Regions count              |
 
 
-In the following example we will aggregate the retrieved data into tiling regions of length 100000.
-In the end we remove the aggregated regions that do not contain any region.
+In the following example, we aggregate the retrieved data into tiling regions of length 100000.
+In the, end we remove the aggregated regions that do not contain any region:
 
 ```python
 (status, blood_related) = server.get_bio_source_related("blood", user_key)

@@ -1,6 +1,6 @@
 ## Filtering Regions
 
-The [filter_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-filter_regions) command is used to filter regions according to their content. This command receives a `query_id`, the region field name that will be filtered, the operation (```==```, ```!=```, ```>```,```>=```, ```<```, ```<=``), and the field type.
+The [filter_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-filter_regions) command is used to filter regions according to their content. This command receives the ID of a query, the region field name that will be filtered, the operation (```==```, ```!=```, ```>```,```>=```, ```<```, ```<=``), and the field type:
 
 Example:
 ```python

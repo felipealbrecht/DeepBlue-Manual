@@ -1,6 +1,6 @@
-## Obtaining Regions Sequences
+## Obtaining Regions' Sequences
 
-Just use the metafield ```@SEQUENCE``` for obtaining the regions sequences:
+Just use the metafield ```@SEQUENCE``` for obtaining the regions' sequences:
 
 ```python
 (status, blood_related) = server.get_bio_source_related("blood", user_key)

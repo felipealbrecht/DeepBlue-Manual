@@ -1,9 +1,9 @@
 ## Patterns
 
-It is possible to create Annotations based on sequence patterns.
-The command [find_pattern](http://deepblue.mpi-inf.mpg.de/api.html#api-find_pattern) creates an Annotation based on the given pattern. This command has three parameters: the pattern, in [Perl Regular Expression Syntax](http://www.boost.org/doc/libs/1_44_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html), the ```genome```, and a boolean, to specify if the pattern matching will be overlapping or non-overlapping.
+The command [find_pattern](http://deepblue.mpi-inf.mpg.de/api.html#api-find_pattern) creates an annotation based on a given sequence pattern.
+This command has three parameters: the pattern, in [Perl Regular Expression Syntax](http://www.boost.org/doc/libs/1_44_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html), the ```genome```, and a boolean, to specify if the pattern matching will be overlapping or non-overlapping.
 
-The difference between overlapping and non-overlapping is as follow: when an non-overlapping the pattern is found, the pattern searching continues in the position after the end end of the match. In the case of an  overlapping pattern, the searching process continues one position after the beginning of the match.
+The difference between overlapping and non-overlapping is as follows: when a non-overlapping pattern is found, the pattern searching continues in the position after the end end of the match. In the case of an  overlapping pattern, the searching process continues one position after the beginning of the match:
 
 ```python
 status, _id = server.find_pattern("TATA", "hg19_only_chr19", True, user_key)
@@ -12,7 +12,7 @@ print server.info(_id, user_key)
 
 ### Patterns Metafield
 
-It is possible to get the number of times that a occurs happens with the metafields ```@COUNT.NON-OVERLAP(PATTERN)``` and ```@COUNT.NON-OVERLAP(PATTERN)``
+It is possible to count how many times a pattern occours in a region with the metafields ``@COUNT.NON-OVERLAP(PATTERN)`` and ``@COUNT.NON-OVERLAP(PATTERN)``:
 
 
 ```python

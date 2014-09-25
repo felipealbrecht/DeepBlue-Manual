@@ -1,4 +1,4 @@
-## User Keys
+## User Key
 The *user_key* is your unique and personal identification for the DeepBlue Epigenomic Data Server.
 
 It is **confidential** and **must not be shared**, even with co-workers. Contact us if you encounter any problems with your key.
