@@ -62,9 +62,7 @@ For example, we can rewrite the format defined by ```"Chromosome:String,Start:In
  * ```type``` can be ```string```, ```integer```, ```double```, ```category```, or ```range```.
  * ```default_value``` is the default value for this the column.
 
-Advice: Use a column with **\*** (start) as ```default_value``` to ignore all the content of the column.
-For this purpose, DeepBlue has the column *IGNORE*.
-It should be used when the entire column content should be ignored.
+DeepBlue has the column *IGNORE*, this column type should be used when the entire column content should be ignored.
 
 Three commands are available to define a ```column_type``:
  * [create_column_type_simple](http://deepblue.mpi-inf.mpg.de/api.html#api-create_column_type_simple) — to create a ```column_type``` with simple types: ```string```, ```integer```, and ```double```.
