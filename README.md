@@ -1,7 +1,7 @@
 ![DeepBlue Epigenomic Data Server](http://deepblue.mpi-inf.mpg.de/imgs/deepblue_alt.png)
 
 
-# DeepBlue Epigenomic Data Server Manual - DRAFT
+# DeepBlue Epigenomic Data Server Manual
 
 Last Update: 25/09/2014
 
