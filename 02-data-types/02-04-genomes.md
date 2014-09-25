@@ -28,7 +28,7 @@ The annotation can be found using the [list_annotations](http://deepblue.mpi-inf
 print server.list_annotations("hgX", user_key)
 ```
 
-Use the [select_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-select_annotations) and [get_results](http://deepblue.mpi-inf.mpg.de/api.html#api-get_regions) commands to obtain the genome's annotation:
+Use the [select_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-select_annotations) and [get_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-get_regions) commands to obtain the genome's annotation:
 ```python
 (s, chromosomes_annotation) = server.select_annotations("hgX", "hgX", None, None, None, user_key)
 (s, regions) = server.get_regions(chromosomes_annotation, "CHROMOSOME,START,END", user_key)
