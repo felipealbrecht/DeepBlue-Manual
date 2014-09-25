@@ -1,6 +1,7 @@
 ### Example: Inserting an Experiment
 
-In this example we will insert an Experiment from the ENCODE project. Note: it is just an example, this Experiment is already included in DeepBlue.
+In this example we insert an experiment from the ENCODE project. Note: this is just an example.
+This experiment has already been included in DeepBlue.
 
 ```python
 import gzip

@@ -1,7 +1,6 @@
-## Inserting Sample
+## Inserting Samples
 
-The [add_sample](http://deepblue.mpi-inf.mpg.de/api.html#api-add_sample) command requires the ```name``` and ```description```, the parameter ```extra_metadata``` is optional.
-
+The [add_sample](http://deepblue.mpi-inf.mpg.de/api.html#api-add_sample) command requires a ```name``` and ```description```; the parameter ```extra_metadata``` is optional:
 
 ```python
 (status, bs_ids) = server.search("Astrocy", "bio_sources", user_key)

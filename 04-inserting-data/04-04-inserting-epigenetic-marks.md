@@ -1,4 +1,4 @@
-## Inserting Epigenetic Mark
+## Inserting Epigenetic Marks
 
 The [add_epigenetic_mark](http://deepblue.mpi-inf.mpg.de/api.html#api-add_epigenetic_mark) command requires a ```name``` and ```description```.
 

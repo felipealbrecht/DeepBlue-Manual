@@ -1,4 +1,4 @@
-## Inserting Genome
+## Inserting Genomes
 
 The [add_genome](http://deepblue.mpi-inf.mpg.de/api.html#api-add_genome) command requires a ```name```, ```description```, and ```data```.
 The ```data``` parameter is a string containing all the chromosomes and their sizes.
