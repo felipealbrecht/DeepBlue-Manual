@@ -3,7 +3,7 @@
 
 # DeepBlue Epigenomic Data Server Manual - DRAFT
 
-Last Update: 17/09/2014
+Last Update: 25/09/2014
 
 This manual presents DeepBlue, commands, examples, and usage advice.
 Please read this manual before using DeepBlue.
