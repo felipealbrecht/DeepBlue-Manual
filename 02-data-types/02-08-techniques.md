@@ -1,6 +1,6 @@
 ## Techniques
 
-The technique data type contains information on experimental techniques thereby refining the Epigenetic Mark metadata.
+The *Technique* controlled vocabulary contains information on experimental techniques which refines the epigenetic mark metadata.
 The technique controlled vocabulary contains the technique name and its description.
 
 The command [list_techniques](http://deepblue.mpi-inf.mpg.de/api.html#api-list_techniques) lists all techniques included in DeepBlue:
@@ -12,5 +12,5 @@ The command [list_techniques](http://deepblue.mpi-inf.mpg.de/api.html#api-list_t
 
 Similar technique names can be found using the [list_similar_techniques](http://deepblue.mpi-inf.mpg.de/api.html#api-list_similar_techniques) command.
 
-The command [add_technique](http://deepblue.mpi-inf.mpg.de/api.html#api-add_technique) is used to insert a technique.
+The [add_technique](http://deepblue.mpi-inf.mpg.de/api.html#api-add_technique) command is used to insert a technique.
 Note that not all users have permission to add new techniques.

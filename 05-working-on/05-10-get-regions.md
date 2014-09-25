@@ -34,9 +34,9 @@ The following table shows all metafields in the regions experiment metadata:
 | @EPIGENETIC_MARK | Region epigenetic mark |
 | @PROJECT         | Region project name    |
 | @BIO_SOURCE      | Region biosource name  |
-| @SAMPLE_ID       | Region sample id       |
+| @SAMPLE_ID       | Region sample ID       |
 
-Ai in the previous example, but now returning the experiment name, length and biosource name:
+Ai in the previous example, but now returning the experiment name, length and BioSource name:
 
 ```python
 (status, regions) = server.get_regions(query_id, "CHROMOSOME,START,END,@NAME,@LENGTH,@BIO_SOURCE", user_key)

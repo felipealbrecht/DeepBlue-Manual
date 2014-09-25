@@ -1,7 +1,7 @@
-## User keys
+## User Keys
 The *user_key* is your unique and personal identification for the DeepBlue Epigenomic Data Server.
 
-It is **secret** and **must not be shared**, even with co-workers. Contact us if you encounter any problems with your key.
+It is **confidential** and **must not be shared**, even with co-workers. Contact us if you encounter any problems with your key.
 
 The easiest way to verify your *user_key* is through the [echo](http://deepblue.mpi-inf.mpg.de/api.html#api-echo) command.
 The following code shows how you can verify your *user_key*.
@@ -16,4 +16,4 @@ print server.echo(user_key)
 ```
 
 The ```echo``` command should return: ```['okay', 'Deep Blue (0.9.5) says hi to Your Name']```.
-Please verify your *user_key* if the command returned ```['okay', 'Deep Blue (0.9.5) says hi to a Stranger']```.
+Please verify your *user_key* if the command returns ```['okay', 'Deep Blue (0.9.5) says hi to a Stranger']```.

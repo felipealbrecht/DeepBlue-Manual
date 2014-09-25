@@ -8,7 +8,7 @@ DeepBlue has the following commands for working with the data:
 * [intersection](http://deepblue.mpi-inf.mpg.de/api.html#api-intersection) — Return the regions that intersect the regions from another query
 * [merge_queries](http://deepblue.mpi-inf.mpg.de/api.html#api-merge_queries) — Merge two queries into one
 * [tiling_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-tiling_regions) — Create regions of the given tiling size over the chromosomes
-* [get_experiments_by_query](http://deepblue.mpi-inf.mpg.de/api.html#api-get_experiments_by_query) — Return the Experiment names and ids of the selected regions
+* [get_experiments_by_query](http://deepblue.mpi-inf.mpg.de/api.html#api-get_experiments_by_query) — Return the Experiment names and IDs of the selected regions
 * [count_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-count_regions) — Count the number of regions
 * [get_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-get_regions) — Return the query regions
 * [aggregate](http://deepblue.mpi-inf.mpg.de/api.html#api-aggregate) — Get the regions for the given query in the requested BED format

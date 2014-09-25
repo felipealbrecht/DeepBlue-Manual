@@ -1,11 +1,13 @@
 ## Annotations
 
-The auxiliary genomic regions data is organized as Annotations in DeepBlue.
-Each Annotation is composed by a regions set, a name, *Genome*, and *user* attributes.
+The auxiliary genomic regions data is organized as *Annotations* in DeepBlue.
+Each Annotation is composed by a region set, a name, genome, and *user* attributes.
 
-Annotations are used to store genomic regions that do not come from an epigenomic Experiment, but contain other (epi-)genetic information. Examples of Annotations are: CpG Islands and Genes. It is possible to list all available Annotations using the [list_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-list_annotations) command. The *list_annotations* command has two parameters: *Genome* and *user_key*.
+Annotations are used to store genomic regions that do not come from an epigenomic experiment, but contain other (epi-)genetic information.
+Examples of annotations are: CpG islands and genes.
+It is possible to list all available annotations using the [list_annotations](http://deepblue.mpi-inf.mpg.de/api.html#api-list_annotations) command. The *list_annotations* command has two parameters: *Genome* and *user_key*.
 
-The following snipped demonstrate how to list all available Annotations for the genome assembly *hg19*:
+The following source code demonstrates how to list all available annotations for the genome assembly *hg19*:
 
 ```python
 import xmlrpclib

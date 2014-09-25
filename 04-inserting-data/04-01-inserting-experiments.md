@@ -6,7 +6,7 @@ The Experiments use all controlled vocabularies for their metadata. For this rea
  * Name - Experiment name – Unique by user
  * Genome - Genome assembly
  * Epigenetic Mark
- * Sample - Sample id
+ * Sample - Sample ID
  * Technique - Technique used by the Experiment
  * Project - Project to which this Experiment belongs
  * Description - Free text field containing a description of the experiment

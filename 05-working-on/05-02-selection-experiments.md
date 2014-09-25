@@ -8,8 +8,8 @@ The [select_regions](http://deepblue.mpi-inf.mpg.de/api.html#api-select_regions)
 
 
 *Example:*
-Firstly, we use the [get_bio_source_related](http://deepblue.mpi-inf.mpg.de/api.html#api-get_bio_source_related) command to retrieve all bio sources related with the term "blood" and then we select only the BioSources names from the ```blood_related``` list.
-After, we select all samples from these BioSources names and get their ids.
+Firstly, we use the [get_bio_source_related](http://deepblue.mpi-inf.mpg.de/api.html#api-get_bio_source_related) command to retrieve all BioSources related with the term "blood" and then we select only the BioSources names from the ```blood_related``` list.
+After, we select all samples from these BioSources names and get their IDs.
 In the end, we select all ```chromosome``` *chr1* regions from the experiments that have ```genome``` *hg19*, ```epigenetic_mark``` *Methylation* and the found samples and we print the chromosome, start, and end of these regions.
 
 ```python

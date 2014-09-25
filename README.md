@@ -11,14 +11,14 @@ We also provide a reference guide in the [DeepBlue API Reference Guide](http://d
 
 #### Disclaimer
 
-DeepBlue is a work in progress. The API and data can (and probably will) change.
+DeepBlue is a work in progress: the API and data can (and probably will) change.
 
 
 #### Data
 
 DeepBlue only imports publicly available data.
 
-Uploading data to DeepBlue will make your data accessible to other users.
+Uploading data to DeepBlue will make that data accessible to other users.
 
 #### License
 

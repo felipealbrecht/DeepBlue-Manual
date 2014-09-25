@@ -1,26 +1,27 @@
 ## Free Text Search
 
-The listing operations are useful for listing the ids and names, but not for searching through data content.
-For instance, if we wish to search for a [Experiment](../02-data-types/02-01-experiments.md) with associated metadata, we must [list all the Experiments](http://deepblue.mpi-inf.mpg.de/api.html#api-list_experiments), execute [info](http://deepblue.mpi-inf.mpg.de/api.html#api-info) and analyze the result or each experiment.
-With associated [list_samples](http://deepblue.mpi-inf.mpg.de/api.html#api-list_samples) needs the correct metadata content to find the expected sample.
+The listing operations are useful for listing the IDs and names, but not for searching through data content.
+For example, if we wish to search for an [Experiment](../02-data-types/02-01-experiments.md) with associated metadata, we must [list all the experiments](http://deepblue.mpi-inf.mpg.de/api.html#api-list_experiments), execute [info](http://deepblue.mpi-inf.mpg.de/api.html#api-info) and analyze the result of each experiment.
+Also, the [list_samples](http://deepblue.mpi-inf.mpg.de/api.html#api-list_samples) command needs the correct metadata content to find the expected sample.
 In short, it is not an optimal way to search data.
-The [search](http://deepblue.mpi-inf.mpg.de/api.html#api-search) command is the optimal method for data searching in DeepBlue.
-It is a command that simplifies the task of finding data.
+The [search](http://deepblue.mpi-inf.mpg.de/api.html#api-search) command is the optimal method for data searching in DeepBluebecause it simplifies the task of finding data.
 
-The [search](http://deepblue.mpi-inf.mpg.de/api.html#api-search) command has three parameters: the free text for which to search, the data type, optionally,and the *user_key*. The data type defines on which collection the search will be made: *annotations*, *biosources*, *epigenetic_marks*, *experiments*, *genomes*, *projects*, *samples*, *sample fields*, *techniques*, or *tilings*. Multiple data types can be combined, i.e. it is possible to search for the term "cancer" in all experiments and samples.
+The [search](http://deepblue.mpi-inf.mpg.de/api.html#api-search) command has three parameters: the free text for which to do search, the data type (optional), and the *user_key*. The data type defines the collection on which the search will be made.
+The available collections are: *annotations*, *biosources*, *epigenetic_marks*, *experiments*, *genomes*, *projects*, *samples*, *sample fields*, *techniques*, *tilings*, and *column_types*. Multiple data types can be combined, i.e., it is possible to search for the term "cancer" in all experiments and samples.
 The search command will search for the free text input in all data content.
-This means that the command will look in the data name, description, other data type attributes, and also the extra metadata.
+This means that the command will look at the data name, description, other data type attributes, and also at the extra metadata.
 
-The [search](http://deepblue.mpi-inf.mpg.de/api.html#api-search) command result is a set of tuples, ordered by relevance, containing the data id, data name, and data type. The command returns a maximum of 100 values. The command returns a set of ids and name; the command [info](http://deepblue.mpi-inf.mpg.de/api.html#api-info). should be used to obtain more information about the retrieved items.
+The [search](http://deepblue.mpi-inf.mpg.de/api.html#api-search) command result is a set of tuples, ordered by relevance, containing the data id, data name, and data type. The command returns a maximum of 100 values.
+The command returns a set containing the IDs and names; the [info](http://deepblue.mpi-inf.mpg.de/api.html#api-info) command offers more information about the retrieved items.
 
-In the following example, we search for all samples containing either the word "cancer" **or** "blood" in their description.
+In the following example, we search for all samples containing either the word "cancer" **or** "blood" in their description:
 ```python
 server.search("cancer blood", "samples", user_key)
 ```
 
 The following example searches for cancer **or** blood **or** methylation.
 This means that an experiment with only the word "methylation" in its metadata will also be returned.
-Experiments containing all three given words will have higher scores and will appear before those experiments with only two or one of the given words.
+Experiments containing all three given words will have higher scores and will appear before those experiments with only one or two of the given words:
 ```python
 server.search("cancer blood methylation", "experiments", user_key)
 ```
@@ -31,7 +32,7 @@ More complex searches can also be performed:
  * The hyphen symbol (*-*) can be used to exclude a word
 
 
-For searching all Experiments involving "cancer" **and** "blood" ***and*** "methylation":
+To search all experiments including "cancer" **and** "blood" ***and*** "methylation":
 ```python
 server.search("\"cancer\" \"blood\" \"methylation\"", "samples", user_key)
 ```
@@ -46,7 +47,7 @@ To search for "methylation" **and** "cancer"  **and** **not** "rrbs" **and** **n
 server.search("\"methylation\" \"cancer\" -rrbs -histone -modification ", "experiments", user_key)
 ```
 
-Please be aware that the terms inside  ```\" \"``` are searched exactly as they are given, turning off the default functionality to also return similar terms.
+Please be aware that the terms inside  ```\" \"``` are searched for exactly as they are entered, turning off the default functionality of searching for similar terms.
 
 
 #### More Examples
@@ -65,7 +66,7 @@ for r in result[:3]:   # Select first three elements
 ['okay', {'format': 'NAME,SCORE,STRAND,THICK_START,THICK_END,ITEM_RGB,BLOCK_COUNT,BLOCK_SIZES', 'sex': 'M', 'done': '', 'sample_id': 's269', 'karyotype': 'cancer', 'client_address': '127.0.0.1', 'technique': 'RRBS', 'content_format': 'bed', 'genome': 'hg19', 'type': 'experiment', 'description': 'prostate adenocarcinoma, "LNCaP clone FGC was isolated in 1977 by J.S. Horoszewicz, et al., from a needle aspiration biopsy of the left supraclavicular lymph node of a 50-year-old caucasian male (blood type B+) with confirmed diagnosis of metastatic prostate carcinoma." - ATCC. (Horoszewicz et al. LNCaP Model of Human Prostatic Carcinoma. Cancer Research 43, 1809-1818, April 1983.)', 'bio_source_name': 'LNCaP', 'user': 'Populator', 'upload_end': '', 'tier': '3', 'extra_metadata': {'dataVersion': 'ENCODE Jan 2011 Freeze', 'tableName': 'wgEncodeHaibMethylRrbsLncapDukeSitesRep1', 'subId': '3159', 'dccAccession': 'wgEncodeEH001406', 'dateSubmitted': '2011-01-06', 'obtainedBy': 'Duke', 'size': '14M', 'grant': 'Myers', 'cell': 'LNCaP', 'dataType': 'MethylRrbs', 'replicate': '1', 'treatment': 'None', 'dateUnrestricted': '2011-10-06', 'type': 'bed', 'composite': 'wgEncodeHaibMethylRrbs', 'labExpId': 'SL787', 'lab': 'HudsonAlpha', 'geoSampleAccession': 'GSM683862', 'md5sum': '9e713c244a69462ff2bd50b88ce0ff19', 'project': 'wgEncode', 'epigenetic_mark': 'MethylRrbs', 'view': 'Sites'}, 'lineage': 'endoderm', 'name': 'wgEncodeHaibMethylRrbsLncapDukeSitesRep1', 'project': 'ENCODE', 'epigenetic_mark': 'Methylation', 'upload_start': '', '_id': 'e38', 'organism': 'human'}]
 ```
 
-In this example we search for experiments whose metadata does not contain the term "rrbs":
+In this example, we search for experiments whose metadata does not contain the term "rrbs":
 ```python
 (s, result) = server.search("methylation -rrbs  -histone -modification cancer ", "experiments", user_key)
 for r in result[:3]:   # Select first three elements
