@@ -21,7 +21,8 @@ The data must be in the [BED](http://genome.ucsc.edu/FAQ/FAQformat.html#format1)
 ### BED Data Format
 
 When inserting an experiment in [BED](http://genome.ucsc.edu/FAQ/FAQformat.html#format1) format, the  ```format``` parameter should describe the data content.
-The format contains the field names separated by commas (,) where each field must have a ```name``` and ```type```. An optional value, named ```ignore_if```, can be used to indicate what should be ignored.
+The format contains the field names separated by commas (,) where each field must have a ```name``` and ```type```. An optional value, named ```default_value```, can be used to indicate the value of this column if some value is missing.
+The ```default_value```is also used in the [get_results](http://deepblue.mpi-inf.mpg.de/api.html#api-get_regions) when some column that the experiment does not contain is requested.
 Remember that the [BED](http://genome.ucsc.edu/FAQ/FAQformat.html#format1) format uses tabs as field separators.
 
 Let us take at the following BED file:
@@ -59,7 +60,11 @@ For example, we can rewrite the format defined by ```"Chromosome:String,Start:In
 
  * ```name``` is the unique identifier that will be used in the BED file descriptor.
  * ```type``` can be ```string```, ```integer```, ```double```, ```category```, or ```range```.
- * ```ignore_if``` can be used to ignore the column content if its content is lexically the same as that defined in the ```column_type``.
+ * ```default_value``` is the default value for this the column.
+
+Advice: Use a column with **\*** (start) as ```default_value``` to ignore all the content of the column.
+For this purpose, DeepBlue has the column *IGNORE*.
+It should be used when the entire column content should be ignored.
 
 Three commands are available to define a ```column_type``:
  * [create_column_type_simple](http://deepblue.mpi-inf.mpg.de/api.html#api-create_column_type_simple) — to create a ```column_type``` with simple types: ```string```, ```integer```, and ```double```.
